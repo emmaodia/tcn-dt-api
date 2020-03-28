@@ -1,0 +1,31 @@
+{
+  "name": "tcn-dt-api",
+  "version": "1.0.0",
+  "description": "Repository of Technical Experts in the TCN Digital Tech Community",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.5"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "devstart": "nodemon index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "author": "Emmanuel Oaikhenan",
+  "license": "Apache-2.0"
+}
