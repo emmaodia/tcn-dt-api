@@ -71,6 +71,6 @@ app.use((error, req, res, next) => {
 
 //Server COnfiguration
 const port = 5000;  
-app.listen(port, () => console.log(`App running on port ${port}!`))
+app.listen(process.env.PORT, () => console.log(`App running on port ${port}!`))
 
 module.exports = app;
