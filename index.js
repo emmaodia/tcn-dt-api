@@ -6,6 +6,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const dotenv = require('dotenv');
+dotenv.config();
 
 //Router Path for Profiles
 const profileRouter = require('./profile');
@@ -32,12 +34,12 @@ app.use('/api/v1/profile', profileRouter);
 
 //Database Configuration
 const mongoose = require("mongoose");
-const url = "mongodb://localhost:27017/enterpair-api";
+//const url = "mongodb://localhost:27017/enterpair-api";
 
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
-mongoose.connect( url , {
+mongoose.connect( process.env.MONGOLAB , {
     keepAlive: true,
     useNewUrlParser: true,
     useCreateIndex: true,
